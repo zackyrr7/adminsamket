@@ -38,8 +38,8 @@ class _NavbarState extends State<Navbar> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Beranda'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.history), label: 'Transaksi'),
-          BottomNavigationBarItem(icon: Icon(Icons.help), label: 'Bantuan'),
+              icon: Icon(Icons.history), label: 'Penjemputan'),
+          BottomNavigationBarItem(icon: Icon(Icons.help), label: 'Transaksi'),
         ],
       ),
     );
