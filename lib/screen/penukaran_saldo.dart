@@ -19,7 +19,7 @@ class _PenukaranSaldoScrenState extends State<PenukaranSaldoScren> {
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return <Widget>[
             SliverAppBar(
-              title: const Text('Penjemputan'),
+              title: const Text('Transaksi'),
               centerTitle: true,
               pinned: true,
               floating: true,
@@ -28,10 +28,16 @@ class _PenukaranSaldoScrenState extends State<PenukaranSaldoScren> {
                     color: Colors.greenAccent,
                     borderRadius: BorderRadius.circular(20)),
                 tabs: const [
-                  Tab(child: Text('Verifikasi Admin',textAlign: TextAlign.center,)),
-                 
                   Tab(
-                    child: Text('Selesai',textAlign: TextAlign.center,),
+                      child: Text(
+                    'Verifikasi Admin',
+                    textAlign: TextAlign.center,
+                  )),
+                  Tab(
+                    child: Text(
+                      'Selesai',
+                      textAlign: TextAlign.center,
+                    ),
                   )
                 ],
               ),
@@ -39,10 +45,7 @@ class _PenukaranSaldoScrenState extends State<PenukaranSaldoScren> {
           ];
         },
         body: const TabBarView(
-          children: <Widget>[
-          TransaksiVerif(),
-          TransaksiSelesai()
-          ],
+          children: <Widget>[TransaksiVerif(), TransaksiSelesai()],
         ),
       )),
     );

@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors
+
 import 'package:admin_samket/screen/bantuan.dart';
 import 'package:admin_samket/screen/barang.dart';
 import 'package:flutter/material.dart';
@@ -18,10 +20,88 @@ class _BerandaState extends State<Beranda> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            Container(
+              width: ScreenUtil().setWidth(360),
+              height: ScreenUtil().setHeight(100),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      width: ScreenUtil().setWidth(100),
+                      height: ScreenUtil().setHeight(100),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Jumlah Pengguna",
+                            style: TextStyle(fontSize: ScreenUtil().setSp(12)),
+                            textAlign: TextAlign.center,
+                          ),
+                          Text(
+                            "100",
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: ScreenUtil().setWidth(100),
+                      height: ScreenUtil().setHeight(100),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Jumlah Transaksi",
+                            style: TextStyle(fontSize: ScreenUtil().setSp(12)),
+                            textAlign: TextAlign.center,
+                          ),
+                          Text(
+                            "100",
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: ScreenUtil().setWidth(100),
+                      height: ScreenUtil().setHeight(100),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Jumlah Penjemputan",
+                            style: TextStyle(fontSize: ScreenUtil().setSp(12)),
+                            textAlign: TextAlign.center,
+                          ),
+                          Text(
+                            "100",
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: GestureDetector(
-                 onTap: () {
+                onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return const ScreenBarang();
                   }));
