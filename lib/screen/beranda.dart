@@ -4,6 +4,7 @@ import 'package:admin_samket/model/jemput_model.dart';
 import 'package:admin_samket/screen/bantuan.dart';
 import 'package:admin_samket/screen/barang.dart';
 import 'package:admin_samket/screen/jenis_transaksi.dart';
+import 'package:admin_samket/screen/kalkulator.dart';
 import 'package:admin_samket/screen/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -257,6 +258,41 @@ class _BerandaState extends State<Beranda> {
                         ),
                         Text(
                           'Jenis Transaksi',
+                          style: TextStyle(fontSize: ScreenUtil().setSp(15)),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const MyKalkulator();
+                  }));
+                },
+                child: Container(
+                  height: ScreenUtil().setHeight(50),
+                  width: ScreenUtil().setWidth(340),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        const Icon(Icons.badge),
+                        SizedBox(
+                          width: ScreenUtil().setWidth(5),
+                        ),
+                        Text(
+                          'Karkulator',
                           style: TextStyle(fontSize: ScreenUtil().setSp(15)),
                         ),
                       ],
