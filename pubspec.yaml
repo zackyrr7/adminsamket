@@ -31,16 +31,17 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_launcher_icons: ^0.13.1
   flutter_screenutil: ^5.8.4
   http: ^1.1.0
+  intl: ^0.18.1
   shared_preferences: ^2.2.0
-  flutter_launcher_icons: "^0.13.1"
 
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
   image_path: "assets/images/logo2.png"
-  min_sdk_android: 21 
+  min_sdk_android: 21
 
 dev_dependencies:
   flutter_lints: ^2.0.0
