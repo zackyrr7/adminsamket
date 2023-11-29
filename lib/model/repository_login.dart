@@ -19,12 +19,12 @@ class RepositoryLogin {
 
         print('Response Status: ${response.body}');
         if (jsonReponse['succes'].toString() == "true") {
-          sharedPreferences.setString("id", jsonReponse['id'].toString());
-          sharedPreferences.setString('no_hp', jsonReponse['no_hp']).toString();
+          // sharedPreferences.setString("id", jsonReponse['id'].toString());
+          // sharedPreferences.setString('no_hp', jsonReponse['no_hp']).toString();
           sharedPreferences.setString(
               "transaksi", jsonReponse['transaksi'].toString());
-          sharedPreferences.setString("user", jsonReponse['user'].toString());
-          sharedPreferences.setString("pesan", jsonReponse['pesan'].toString());
+          // sharedPreferences.setString("user", jsonReponse['user'].toString());
+          // sharedPreferences.setString("pesan", jsonReponse['pesan'].toString());
           print(jsonReponse['succes']);
           print(jsonReponse['id']);
 

@@ -6,6 +6,7 @@ import 'package:admin_samket/screen/barang.dart';
 import 'package:admin_samket/screen/jenis_transaksi.dart';
 import 'package:admin_samket/screen/kalkulator.dart';
 import 'package:admin_samket/screen/login_screen.dart';
+import 'package:admin_samket/screen/pengguna.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -112,10 +113,15 @@ class _BerandaState extends State<Beranda> {
                             style: TextStyle(fontSize: ScreenUtil().setSp(12)),
                             textAlign: TextAlign.center,
                           ),
-                          Text(
-                            user2,
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
+                          // Text(
+                          //   user2,
+                          //   style: TextStyle(fontWeight: FontWeight.bold),
+                          // ),
+                          ElevatedButton(onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const PenggunaScreen();
+                  }));
+                }, child: Text("Klik Disini"))
                         ],
                       ),
                     ),
@@ -134,10 +140,7 @@ class _BerandaState extends State<Beranda> {
                             style: TextStyle(fontSize: ScreenUtil().setSp(12)),
                             textAlign: TextAlign.center,
                           ),
-                          Text(
-                            transaksi2,
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
+                          Text(transaksi2)
                         ],
                       ),
                     ),
@@ -156,10 +159,7 @@ class _BerandaState extends State<Beranda> {
                             style: TextStyle(fontSize: ScreenUtil().setSp(12)),
                             textAlign: TextAlign.center,
                           ),
-                          Text(
-                            pesan2,
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
+                           Text('nanti aja lah di update')
                         ],
                       ),
                     )
