@@ -71,8 +71,11 @@ class _BantuanState extends State<Bantuan> {
                     children: [
                       Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text(listPertanyaan[index].judul)),
+                          child: Container(
+                              width: ScreenUtil().setWidth(225),
+                              child: Text(listPertanyaan[index].judul))),
                       Container(
+                        // color: biruMain,
                         child: Row(
                           children: [
                             IconButton(
